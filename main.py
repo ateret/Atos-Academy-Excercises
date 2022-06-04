@@ -1,22 +1,24 @@
-# This is a sample Python script.
+def createfile(string):
+    try:
+        file = open('zad1.txt', 'a')
+        file.write(string)
+        file.close()
+    except Exception as e:
+        print("error: ", e)
 
-# Press Shift+F10 to execute it or replace it with your code.
-# Press Double Shift to search everywhere for classes, files, tool windows, actions, and settings.
+samogloski = ['a','i','o','y','e']
 
-
-def print_hi(name):
-    # Use a breakpoint in the code line below to debug your script.
-    print(f'Hi, {name}')  # Press Ctrl+F8 to toggle the breakpoint.
-
-
-# Press the green button in the gutter to run the script.
-if __name__ == '__main__':
-    print_hi('PyCharm')
-
-# See PyCharm help at https://www.jetbrains.com/help/pycharm/
-
-
-mystrings = ["lol","xd"]
-myints = [2,3,5]
-mystrings.extend(myints)
-print (mystrings)
+createfile('cos')
+file = open('zad1.txt', 'r')a
+lines = file.readlines()
+for line in lines:
+    tekst = line
+    do_zmiany = []
+    for i in range(len(line)):
+        for j in range(len(samogloski)):
+            if (tekst[i] == samogloski[j]):
+                do_zmiany.append(tekst[i])
+    for i in range(len(do_zmiany)):
+        tekst = tekst.replace(do_zmiany[i], "")
+    print(tekst, end="")
+file.close()
