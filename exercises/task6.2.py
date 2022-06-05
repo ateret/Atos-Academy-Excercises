@@ -18,3 +18,4 @@ while game_running:
     elif y == x:
         print(f'Brawo! Trafiles po {counter} próbie!!')
         game_running = False
+

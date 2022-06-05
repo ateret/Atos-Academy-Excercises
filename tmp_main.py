@@ -9,7 +9,7 @@ def createfile(string):
 samogloski = ['a','i','o','y','e']
 
 createfile('cos')
-file = open('zad1.txt', 'r')a
+file = open('zad1.txt', 'r')
 lines = file.readlines()
 for line in lines:
     tekst = line
